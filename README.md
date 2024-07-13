@@ -32,15 +32,20 @@ proporcionadas al usuario.
 ![Lista de autores registrados](https://github.com/ZOECK17/LiterAlura/blob/3d871ad46a8268354287b363bba048220554797e/capturas/Lista%20de%20autores%20registrados.png)
 
 ### Buscar y mostrar autores vivos en un año determinado
+![Lista de autores vivos](https://github.com/ZOECK17/LiterAlura/blob/fe02094264978c78dd783e655d7b55d0c7260042/capturas/Lista%20de%20autores%20vivos.png)
 
 #### Buscar y mostrar autores vivos en un año determinado sin registros
+![Lista de autores no vivos](https://github.com/ZOECK17/LiterAlura/blob/fe02094264978c78dd783e655d7b55d0c7260042/capturas/Lista%20de%20autores%20no%20vivos.png)
 
 ### Buscar y mostrar libros por idioma
+![Lista de libros por idioma](https://github.com/ZOECK17/LiterAlura/blob/fe02094264978c78dd783e655d7b55d0c7260042/capturas/Lista%20de%20libros%20por%20idioma.png)
 
 ### Mostrar el top 5 de libros más descargados
-
+![Top 5](https://github.com/ZOECK17/LiterAlura/blob/fe02094264978c78dd783e655d7b55d0c7260042/capturas/Top%205.png)
 
 ### Mostrar estadísticas generales de la base de datos
+![Estadisticas generales](https://github.com/ZOECK17/LiterAlura/blob/fe02094264978c78dd783e655d7b55d0c7260042/capturas/Estadisticas%20generales.png)
+
 
 ## ⚙️ **Tenología utilizada**
 ```
