@@ -1,5 +1,7 @@
 package com.alura.literalura.service;
 
+import com.alura.literalura.model.Datos;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;

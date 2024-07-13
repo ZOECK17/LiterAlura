@@ -2,6 +2,9 @@ package com.alura.literalura.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Entity
 @Table(name = "libros")
 public class Libros {
@@ -10,26 +13,31 @@ public class Libros {
         private Long Id;
         @Column(unique = true)
         private String titulo;
-//        private String autor;
-        private String idioma;
-        private Integer numeroDeDescargas;
+        @Enumerated(EnumType.STRING)
+        private Idioma idioma;
+        private double numeroDeDescargas;
+        @OneToMany(mappedBy = "libros", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+        private List<Autor> autor;
 
         public Libros(){}
 
         public Libros(DatosLibros datosLibros) {
                 this.titulo = datosLibros.titulo();
-//                this.autor = datosLibros.autor();
-                this.idioma = datosLibros.idioma();
+                this.idioma = Idioma.fromString(datosLibros.idioma().stream()
+                        .limit(1)
+                        .collect(Collectors.joining()));
                 this.numeroDeDescargas = datosLibros.numeroDeDescargas();
         }
 
         @Override
         public String toString() {
-                return "titulo='" + titulo + '\'' +
-//                        ", autor=" + autor +
+                return "Libros{" +
+                        "Id=" + Id +
+                        ", titulo='" + titulo + '\'' +
                         ", idioma=" + idioma +
-                        ", numeroDeDescarga='" + numeroDeDescargas + '\'';
-
+                        ", numeroDeDescargas=" + numeroDeDescargas +
+                        ", autor=" + autor +
+                        '}';
         }
 
         public Long getId() {
@@ -48,27 +56,27 @@ public class Libros {
                 this.titulo = titulo;
         }
 
-//        public String getAutor() {
-//                return autor;
-//        }
-//
-//        public void setAutor(String autor) {
-//                this.autor = autor;
-//        }
-
-        public String getIdioma() {
+        public Idioma getIdioma() {
                 return idioma;
         }
 
-        public void setIdioma(String idioma) {
+        public void setIdioma(Idioma idioma) {
                 this.idioma = idioma;
         }
 
-        public Integer getNumeroDeDescargas() {
+        public double getNumeroDeDescargas() {
                 return numeroDeDescargas;
         }
 
-        public void setNumeroDeDescargas(Integer numeroDeDescargas) {
+        public void setNumeroDeDescargas(double numeroDeDescargas) {
                 this.numeroDeDescargas = numeroDeDescargas;
+        }
+
+        public List<Autor> getAutor() {
+                return autor;
+        }
+
+        public void setAutor(List<Autor> autor) {
+                this.autor = autor;
         }
 }
