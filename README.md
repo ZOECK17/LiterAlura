@@ -17,7 +17,7 @@ proporcionadas al usuario.
 7. Muestra las estadísticas generales de la base de datos
 
 ### Buscar libro en la API
-
+![Buscar Libro](capturas/Buscar Libro.png)
 
 #### Buscar libro duplicado
 
